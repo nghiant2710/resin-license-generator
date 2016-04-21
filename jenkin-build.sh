@@ -26,7 +26,7 @@ for image in $IMAGE_LIST; do
 		echo "-----NPM Dependencies-----" >> $FILE_NAME
 		cat "$image/npm.content" >> $FILE_NAME
 	fi
-	if [ -f "$image/npm.content" ]; then
+	if [ -f "$image/bower.content" ]; then
 		echo "-----Bower Dependencies-----" >> $FILE_NAME
 		cat "$image/bower.content" >> $FILE_NAME
 	fi

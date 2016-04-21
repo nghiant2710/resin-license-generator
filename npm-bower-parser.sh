@@ -12,7 +12,7 @@ function extract_json_value() {
 }
 
 if [ -f package.json ]; then
-	npm ls -g --json | extract_json_value 'from' > npm.deps
+	npm ls --json | extract_json_value 'from' > npm.deps
 	while read package
 	do
 		printf "Package: %s - License: %s \n" "$package" "$(npm show $package license | tr '\n' ', ')" >> npm.content
